@@ -45,7 +45,7 @@ on:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
     steps:
@@ -66,9 +66,6 @@ jobs:
     - name: Check Out
       uses: actions/checkout@v4
 
-    # Cleanup The Actions Workspace Using Custom Composite Run Actions
-    - name: Cleanup
-      uses: rokibhasansagar/slimhub_actions@main
       # That's it! Now use your normal steps
 
     - name: Prepare the environment
